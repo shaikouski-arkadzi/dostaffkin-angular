@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { Header } from '../../header/header';
 
 @Component({
   selector: 'app-track',
-  imports: [],
+  imports: [Header],
   templateUrl: './track.html',
   styleUrl: './track.css',
 })
-export class Track {
-
-}
+export class Track {}

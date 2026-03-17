@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { Header } from '../../header/header';
 
 @Component({
   selector: 'app-order',
-  imports: [],
+  imports: [Header],
   templateUrl: './order.html',
   styleUrl: './order.css',
 })
-export class Order {
-
-}
+export class Order {}
