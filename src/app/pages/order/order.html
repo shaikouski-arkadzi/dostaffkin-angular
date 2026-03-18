@@ -14,6 +14,7 @@
           <input
             id="from"
             formControlName="from"
+            [attr.disabled]="!!orderId()"
             placeholder="Откуда: начните вводить адрес"
             autocomplete="off"
           />
@@ -25,6 +26,7 @@
           <input
             id="to"
             formControlName="to"
+            [attr.disabled]="!!orderId()"
             placeholder="Куда: начните вводить адрес"
             autocomplete="off"
           />
@@ -32,7 +34,7 @@
         </div>
       </div>
     </div>
-    <div class="main-package">
+    <div class="main-package" [style.display]="orderId() ? 'none' : null">
       <div class="main-block-title">Размер посылки</div>
 
       <div class="main-sizes">
@@ -57,7 +59,7 @@
         }
       </div>
     </div>
-    <div class="main-speed">
+    <div class="main-speed" [style.display]="orderId() ? 'none' : null">
       <div class="main-block-title">Скорость доставки</div>
       <div class="main-speeds">
         @for (speed of speeds; track speed.value) {
@@ -72,7 +74,7 @@
         }
       </div>
     </div>
-    <div class="main-calculate-block">
+    <div class="main-calculate-block" [style.display]="orderId() ? 'none' : null">
       <button
         id="calc"
         class="button calculate-button"
