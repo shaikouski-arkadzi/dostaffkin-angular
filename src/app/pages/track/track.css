@@ -1,5 +1,5 @@
 .container {
-  background: #f4f4f4 url('/images/track-bg.jpg');
+  background: #f4f4f4 url('../../../../public/images/track-bg.png');
   background-size: cover;
   min-height: 100vh;
   padding: 170px 0 50px 0;
